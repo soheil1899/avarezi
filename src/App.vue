@@ -77,14 +77,14 @@
                         <li class="d-inline-block mx-1">|</li>
                         <li class="d-inline-block mx-1 trafic">عوارض کنترل ترافیک</li>
                     </ul>
-                    <ul class="mx-0 my-1 d-none d-md-block d-lg-none">
-                        <li class="d-inline-block mx-1 hashie">پارک حاشیه ای</li>
-                        <li class="d-inline-block mx-1">|</li>
-                        <li class="d-inline-block mx-1 freeroad">عوارض آزادراه</li>
-                        <li class="d-inline-block mx-1">|</li>
-                        <li class="d-inline-block mx-1 air">عوارض کنترل آلودگی هوا</li>
-                        <li class="d-inline-block mx-1">|</li>
-                        <li class="d-inline-block mx-1 trafic">عوارض کنترل ترافیک</li>
+                    <ul class="mx-0 my-1 d-none d-md-block">
+                        <li class="d-inline-block mx-2 hashie">پارک حاشیه ای</li>
+                        <li class="d-inline-block mx-2">|</li>
+                        <li class="d-inline-block mx-2 freeroad">عوارض آزادراه</li>
+                        <li class="d-inline-block mx-2">|</li>
+                        <li class="d-inline-block mx-2 air">عوارض کنترل آلودگی هوا</li>
+                        <li class="d-inline-block mx-2">|</li>
+                        <li class="d-inline-block mx-2 trafic">عوارض کنترل ترافیک</li>
                     </ul>
                 </div>
                 <div class="py-1 px-lg-5 px-1 footertext">
@@ -261,15 +261,31 @@
     }
     .hashie{
         color: #ffd10f;
+        cursor: default;
     }
-    .freeroad{
+    .hashie:hover{
+        text-shadow: 0 0 0 #ffd10f;
+    }
+    .freeroad {
         color: #34e680;
+        cursor: default;
+    }
+    .freeroad:hover{
+        text-shadow: 0 0 0 #34e680;
     }
     .air{
         color: #529fff;
+        cursor: default;
+    }
+    .air:hover{
+        text-shadow: 0 0 0 #529fff;
     }
     .trafic{
         color: #ff6b55;
+        cursor: default;
+    }
+    .trafic:hover{
+        text-shadow: 0 0 0 #ff6b55;
     }
     .mobileoption{
         border-bottom: 1px solid #282889;

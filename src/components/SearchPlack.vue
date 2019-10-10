@@ -3,46 +3,35 @@
         <div class="col-12 col-md-10 col-lg-7 mx-auto py-5 plackborder">
 
             <div class="plackbox mx-auto position-relative">
-                <img src="/media/plack.png">
-                <input type="text" class="firstnum position-absolute nazanin" maxlength="2" inputmode="number" autofocus
+                <img :src="myplack()">
+                <input id="firstnum" v-model="firstnum" type="text"
+                       :class="changeplack()+' firstnum position-absolute nazanin'" maxlength="2" inputmode="number"
+                       autofocus
                        tabindex="1" placeholder="11">
-                <select id="char" name="char" tabindex="2" class="browser-default position-absolute char nazanin">
-                    <option value="01">الف</option>
-                    <option value="02">ب</option>
-                    <option value="03">پ</option>
-                    <option value="04">ت</option>
-                    <option value="05">ث</option>
-                    <option value="06">ج</option>
-                    <option value="07">چ</option>
-                    <option value="08">ح</option>
-                    <option value="09">خ</option>
-                    <option value="10">د</option>
-                    <option value="11">ذ</option>
-                    <option value="12">ر</option>
-                    <option value="13">ز</option>
-                    <option value="15">س</option>
-                    <option value="16">ش</option>
-                    <option value="17">ص</option>
-                    <option value="18">ض</option>
-                    <option value="19">ط</option>
-                    <option value="20">ظ</option>
-                    <option value="21">ع</option>
-                    <option value="22">غ</option>
-                    <option value="23">ف</option>
-                    <option value="24">ق</option>
-                    <option value="25">ک</option>
-                    <option value="26">گ</option>
-                    <option value="27">ل</option>
-                    <option value="28">م</option>
-                    <option value="29">ن</option>
-                    <option value="30">و</option>
-                    <option value="31">ه</option>
-                    <option value="32">ی</option>
-                </select>
+                <div @click="openselect" class="char position-absolute text-center">
+                    <label :class="labelclass()+' nazanin m-0 charlabel '+changeplack()" v-html="char"></label>
+                </div>
+                <selectcomponent :key="componentid" v-if="selectshow"></selectcomponent>
 
-                <input type="text" class="secondnum position-absolute nazanin" maxlength="3" inputmode="number" tabindex="3" placeholder="111">
-                <input type="text" class="statecode position-absolute nazanin" maxlength="2" inputmode="number" tabindex="4" placeholder="11">
-                <a class="btn btn-success pointer mt-3 btn-block">
+                <input id="secondnum" v-model="secondnum" type="text"
+                       :class="changeplack()+' secondnum position-absolute nazanin'" maxlength="3" inputmode="number"
+                       tabindex="3" placeholder="111">
+                <input id="statecode" v-if="stateshow" v-model="statecode" type="text"
+                       :class="changeplack()+' statecode position-absolute nazanin'" maxlength="2" inputmode="number"
+                       tabindex="4" placeholder="11">
+                <div v-else class="gozarmovaghat position-absolute">
+                    <input id="statecode2" v-model="statecode" type="text"
+                           :class="changeplack()+' gozartop position-absolute nazanin'" maxlength="2" inputmode="number"
+                           tabindex="4" placeholder="11">
+                    <input id="year" v-model="year" type="text"
+                           :class="changeplack()+' gozaryear position-absolute nazanin'" maxlength="2"
+                           inputmode="number"
+                           tabindex="5" placeholder="11">
+                    <input id="month" v-model="month" type="text"
+                           :class="changeplack()+' gozarmon position-absolute nazanin'" maxlength="2" inputmode="number"
+                           tabindex="6" placeholder="11">
+                </div>
+                <a id="button" class="btn btn-success pointer mt-3 btn-block" tabindex="8">
                     <i class="fas fa-search text-white ml-4"></i>
                     <strong class="text-white">
                         ورود به سیستم
@@ -54,12 +43,130 @@
 </template>
 
 <script>
+    import selectcomponent from './selectcomponent';
+
     export default {
-        name: "SearchPlack"
+        name: "SearchPlack",
+        data() {
+            return {
+                componentid: 0,
+                selectshow: false,
+                char: '<i class="fas fa-wheelchair"></i>',
+                charcode: '14',
+                firstnum: null,
+                secondnum: null,
+                statecode: null,
+                year: null,
+                month: null,
+                stateshow: true,
+
+            }
+        },
+        components: {
+            selectcomponent: selectcomponent,
+        },
+        watch: {
+            firstnum(val) {
+                if (val.length == 2) {
+                    document.getElementById("secondnum").focus();
+                }
+            },
+            secondnum(val) {
+                if (val.length == 3) {
+                    if (this.stateshow) {
+                        document.getElementById("statecode").focus();
+                    } else {
+                        document.getElementById("statecode2").focus();
+                    }
+                }
+            },
+            statecode(val) {
+                if (val.length == 2) {
+                    if (this.stateshow) {
+                        document.getElementById("button").focus();
+                    } else {
+                        document.getElementById("year").focus();
+                    }
+                }
+            },
+            year(val) {
+                if (val.length == 2) {
+                    document.getElementById("month").focus();
+                }
+            },
+            month(val) {
+                if (val.length == 2) {
+                    if (val > 12){
+                        this.month = 12;
+                    }
+                    document.getElementById("button").focus();
+                }
+            },
+        },
+        methods: {
+            openselect() {
+                this.componentid += 1;
+                this.selectshow = true;
+            },
+            choosedchar(item, code) {
+                this.char = item;
+                this.charcode = code;
+            },
+            labelclass() {
+                if (this.charcode == 14) {
+                    return 'pt-1';
+                } else {
+                    return '';
+                }
+            },
+            changeplack() {
+                if (this.charcode == '01' || this.charcode == '05' || this.charcode == '23' || this.charcode == '13' || this.charcode == '03') {
+                    return 'whitetext';
+                } else {
+                    return '';
+                }
+            },
+            myplack() {
+                if (this.charcode == '05' || this.charcode == '03') {
+                    this.stateshow = true;
+                    return '/media/green.png';
+                } else if (this.charcode == '04' || this.charcode == '25' || this.charcode == '21') {
+                    this.stateshow = true;
+                    return '/media/yellow.png';
+                } else if (this.charcode == '23' || this.charcode == '13') {
+                    this.stateshow = true;
+                    return '/media/blue.png';
+                } else if (this.charcode == '26') {
+                    this.stateshow = false;
+                    return '/media/g.png';
+                } else if (this.charcode == '01') {
+                    this.stateshow = true;
+                    return '/media/red.png';
+                } else if (this.charcode == '16') {
+                    this.stateshow = true;
+                    return '/media/army.png';
+                } else {
+                    this.stateshow = true;
+                    return '/media/plack.png';
+                }
+            }
+        },
     }
 </script>
 
 <style scoped>
+    .gozarmovaghat {
+        width: 63px;
+        right: 3px;
+        top: 16px;
+        height: 48px;
+        /*background-color: rgba(0,0,0,0.5);*/
+    }
+
+    .whitetext {
+        color: #fff;
+    }
+
     .plack {
         margin-top: 100px;
     }
@@ -74,43 +181,92 @@
 
     .plackborder {
         border-radius: 20px;
-        background-color: rgba(255,255,255, 0.3);
+        background-color: rgba(255, 255, 255, 0.3);
     }
 
     .firstnum, .secondnum, .statecode {
         font-size: 35px;
         border: none;
-        border-bottom: 2px solid #ccc;
         box-shadow: none;
         outline: none;
         direction: ltr;
         text-align: center;
     }
 
+    .gozartop {
+        font-size: 25px;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        direction: ltr;
+        text-align: center;
+        max-width: 65px;
+        left: 0;
+        top: -7px;
+        background-color: transparent;
+    }
+
+    .gozaryear {
+        font-size: 25px;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        direction: ltr;
+        text-align: center;
+        max-width: 29px;
+        left: 0;
+        bottom: -8px;
+        background-color: transparent;
+    }
+
+    .gozarmon {
+        font-size: 25px;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        direction: ltr;
+        text-align: center;
+        max-width: 29px;
+        right: -3px;
+        bottom: -8px;
+        background-color: transparent;
+    }
+
     .char {
-        max-width: 60px;
-        left: 96px;
-        top: 8px;
-        font-size: 30px;
+        width: 55px;
+        left: 100px;
+        top: 2px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .charlabel {
+        cursor: pointer;
     }
 
     .firstnum {
         max-width: 50px;
         left: 38px;
-        top: 3px;
+        top: 6px;
+        background-color: transparent;
     }
 
     .secondnum {
         max-width: 70px;
         left: 165px;
-        top: 3px;
+        top: 6px;
+        background-color: transparent;
     }
 
     .statecode {
-        max-width: 50px;
+        max-width: 55px;
         right: 6px;
-        top: 13px;
+        top: 18px;
         max-height: 46px;
+        background-color: transparent;
     }
 
 </style>
