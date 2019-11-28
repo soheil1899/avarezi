@@ -1,217 +1,252 @@
 <template>
     <div class="all" dir="rtl">
         <div class="firstpage position-relative">
-            <div class="row mx-0 px-lg-5 px-1 py-3 headerlogos">
-                <div class="widthfit mx-auto">
-                    <a class="pointer">
-                        <img src="/media/aaniro.png" height="35px" class="mx-lg-2">
-                    </a>
-                    <a class="pointer">
-                        <img src="/media/cpay.png" height="35px" class="mx-lg-2">
-                    </a>
-                    <a class="pointer">
-                        <img src="/media/logos.png" height="35px" class="mx-lg-2">
-                    </a>
-                    <a class="pointer">
-                        <img src="/media/sepandar.png" height="35px" class="mx-lg-2">
-                    </a>
-                    <a class="pointer">
-                        <img src="/media/mytehran.png" height="35px" class="mx-lg-2">
-                    </a>
-                    <a class="pointer">
-                        <img src="/media/gilsa.png" height="35px" class="mx-lg-2">
-                    </a>
-                </div>
-            </div>
-            <div class="row mx-0 content pt-5 justify-content-center">
-<!--                <div class="col-lg-4 d-none d-lg-block rightmenu pt-5">-->
-<!--                    <div class="mile position-relative">-->
-<!--                        <img src="/media/mile.png" class="imgmile">-->
-<!--                        <div :style="leftarrow(1)" class="widthfit position-absolute pointer menuarrow">-->
-<!--                            <img src="/media/left.png">-->
-<!--                            <div class="position-absolute menutext pl-5">-->
-<!--                                <h6 class="widthfit mx-auto"><strong>-->
-<!--                                    پارک حاشیه ای-->
-<!--                                </strong></h6>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div :style="rightarrow(1)" class="widthfit position-absolute pointer menuarrow">-->
-<!--                            <img src="/media/right.png">-->
-<!--                            <div class="position-absolute menutext pr-5">-->
-<!--                                <h6 class="widthfit mx-auto"><strong>-->
-<!--                                    عوارض آزادراه-->
-<!--                                </strong></h6>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div :style="leftarrow(2)" class="widthfit position-absolute pointer menuarrow">-->
-<!--                            <img src="/media/left.png">-->
-<!--                            <div class="position-absolute menutext pl-5">-->
-<!--                                <h6 class="widthfit mx-auto"><strong>-->
-<!--                                    عوارض کنترل آلودگی هوا-->
-<!--                                </strong></h6>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div :style="rightarrow(2)" class="widthfit position-absolute pointer menuarrow">-->
-<!--                            <img src="/media/right.png">-->
-<!--                            <div class="position-absolute menutext pr-5">-->
-<!--                                <h6 class="widthfit mx-auto"><strong>-->
-<!--                                    عوارض کنترل ترافیک-->
-<!--                                </strong></h6>-->
-<!--                            </div>-->
-<!--                        </div>-->
+            <div class="row mx-0 content position-relative pt110">
 
-<!--                    </div>-->
-<!--                </div>-->
-                <div class="col-12 col-lg-8 leftplack">
-                    <searchplack></searchplack>
-                </div>
-            </div>
-            <div class="row mx-0 position-absolute topfooter">
-                <div class="px-2 footertext mobileoption text-center">
-                    <ul class="mx-0 my-1 font10 d-block d-md-none">
-                        <li class="d-inline-block mx-1 hashie">پارک حاشیه ای</li>
-                        <li class="d-inline-block mx-1">|</li>
-                        <li class="d-inline-block mx-1 freeroad">عوارض آزادراه</li>
-                        <li class="d-inline-block mx-1">|</li>
-                        <li class="d-inline-block mx-1 air">عوارض کنترل آلودگی هوا</li>
-                        <li class="d-inline-block mx-1">|</li>
-                        <li class="d-inline-block mx-1 trafic">عوارض کنترل ترافیک</li>
-                    </ul>
-                    <ul class="mx-0 my-1 d-none d-md-block">
-                        <li class="d-inline-block mx-2 hashie">پارک حاشیه ای</li>
-                        <li class="d-inline-block mx-2">|</li>
-                        <li class="d-inline-block mx-2 freeroad">عوارض آزادراه</li>
-                        <li class="d-inline-block mx-2">|</li>
-                        <li class="d-inline-block mx-2 air">عوارض کنترل آلودگی هوا</li>
-                        <li class="d-inline-block mx-2">|</li>
-                        <li class="d-inline-block mx-2 trafic">عوارض کنترل ترافیک</li>
-                    </ul>
-                </div>
-                <div class="py-1 px-lg-5 px-1 footertext">
-                    <div class="col-12 text-center d-none d-md-block" dir="ltr">
-                        <div class="d-inline-block mx-lg-5 mx-2">
-                            <i class="far fa-envelope fa-lg mx-1"></i>
-                            Info@gilsa.ir
-                        </div>
-
-                        <div class="d-inline-block mx-lg-5 mx-2">
-                            <i class="fas fa-phone-square-alt fa-lg mx-1"></i>
-                            021-33265326 / 021-33265325
-                        </div>
-                        <div class="d-inline-block mx-lg-5 mx-2">
-                            <i class="fas fa-mobile-alt fa-lg mx-1"></i>
-                            0912-8576971 / 0935-2653652
+                <div class="col-12 heightfit optionstop position-absolute">
+                    <div class="row mx-0 justify-content-center">
+                        <div class="col-12 col-lg-8 row m-0 px-1">
+                            <div class="col text-center optionsbtn px-1 pointer">
+                                <div class="pt-1 pointer">
+                                    <label class="pointer d-none d-md-block">شارژ پلاک</label>
+                                    <label class="pointer d-block d-md-none font11">شارژ پلاک</label>
+                                </div>
+                            </div>
+                            <div class="col text-center optionsbtn px-1 pointer">
+                                <div class="pt-1 pointer">
+                                    <label class="pointer d-none d-md-block">شارژ آنی رو کارت</label>
+                                    <label class="pointer d-block d-md-none font11">شارژ آنی رو کارت</label>
+                                </div>
+                            </div>
+                            <div class="col text-center optionsbtn px-1 pointer">
+                                <div class="pt-1 pointer">
+                                    <label class="pointer d-none d-md-block">بدهی سی پی</label>
+                                    <label class="pointer d-block d-md-none font11">بدهی سی پی</label>
+                                </div>
+                            </div>
+                            <div class="col text-center optionsbtn px-1 pointer">
+                                <div class="pt-1 pointer">
+                                    <label class="pointer d-none d-md-block">شارژ سی پی</label>
+                                    <label class="pointer d-block d-md-none font11">شارژ سی پی</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 text-center d-block d-md-none" dir="ltr">
-                        <small>
-                            <div class="d-inline-block mx-lg-5 mx-2">
-                                <i class="far fa-envelope fa-lg mx-1"></i>
-                                Info@gilsa.ir
-                            </div>
+                </div>
 
-                            <div class="d-inline-block mx-lg-5 mx-2">
-                                <i class="fas fa-phone-square-alt fa-lg mx-1"></i>
-                                021-33265326 / 021-33265325
+                <div class="col-12 order-lg-1 order-0 col-lg-4">
+                    <searchplack></searchplack>
+                </div>
+                <div class="col-4 order-lg-0 order-1 pt-3 d-none d-lg-block">
+
+                    <div class="row mr-5 px-5 mb70 position-relative">
+                        <div class="col-12 p-3 inputbuttons">
+                            <input type="button" class="btn btn-light btn-sm btn-block font-weight-bolder"
+                                   value="ثبت نام">
+                            <input type="button" class="btn btn-light btn-sm btn-block font-weight-bolder" value="ورود">
+                            <input type="button" class="btn btn-primary btn-sm btn-block font-weight-bolder"
+                                   value="پلاک جدید">
+                        </div>
+                    </div>
+                    <div class="row mr-5 position-relative">
+                        <div class="position-relative">
+                            <img src="/media/perpolarrow.png" width="300px">
+                            <div class="text-center position-absolute labelserviceright">
+                                <label>
+                                    بدهی پارک حاشیه ای
+                                </label>
                             </div>
-                            <div class="d-inline-block mx-lg-5 mx-2">
-                                <i class="fas fa-mobile-alt fa-lg mx-1"></i>
-                                0912-8576971 / 0935-2653652
+                        </div>
+                        <div class="bobel-right1 bobleperpel position-absolute pointer">
+                            <div class="text-center mt-4 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    پرداخت
+                                </label>
                             </div>
+                        </div>
+                        <div class="bobel-right2 bobleperpel position-absolute pointer">
+                            <div class="text-center mt-3 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    جزئیات پارک
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mr-5 position-relative">
+                        <div class="position-relative">
+                            <img src="/media/skyarrow.png" width="300px">
+                            <div class="text-center position-absolute labelserviceright">
+                                <label>
+                                    بدهی طرح آلودگی هوا
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bobel-right1 boblesky position-absolute pointer">
+                            <div class="text-center mt-4 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    پرداخت
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bobel-right2 boblesky position-absolute pointer">
+                            <div class="text-center mt-3 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    جزئیات ورود
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 order-lg-2 order-2 pt-3 d-none d-lg-block">
+                    <div class="row ml-5" dir="ltr">
+                        <div>
+                            <img src="/media/mylogo.png" width="200px">
+                        </div>
+                    </div>
+                    <div class="row mtleft ml-5 position-relative" dir="ltr">
+                        <div class="position-relative">
+                            <img src="/media/redarrow.png" width="300px">
+                            <div class="text-center position-absolute labelserviceleft">
+                                <label>
+                                    بدهی آزادراهــی
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bobel-left1 boblered position-absolute pointer">
+                            <div class="text-center mt-4 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    پرداخت
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bobel-left2 boblered position-absolute pointer">
+                            <div class="text-center mt-3 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    جزئیات تردد
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ml-5 position-relative" dir="ltr">
+                        <div class="position-relative">
+                            <img src="/media/bluearrow.png" width="300px">
+                            <div class="text-center position-absolute labelserviceleft">
+                                <label class="font14">
+                                    بدهی عوارض طرح ترافیک
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bobel-left1 bobleblue position-absolute pointer">
+                            <div class="text-center mt-4 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    پرداخت
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bobel-left2 bobleblue position-absolute pointer">
+                            <div class="text-center mt-3 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    جزئیات تردد
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ml-5 position-relative" dir="ltr">
+                        <div class="position-relative">
+                            <img src="/media/yellowarrow.png" width="300px">
+                            <div class="text-center position-absolute labelserviceleft">
+                                <label>
+                                    مجموع بدهــی
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bobel-left1 bobleyellow position-absolute pointer">
+                            <div class="text-center mt-4 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    پرداخت
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bobel-left2 bobleyellow position-absolute pointer">
+                            <div class="text-center mt-3 pointer">
+                                <label class="text-white labelpay font-weight-bolder pointer">
+                                    ارسـال پیـام
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0 px-lg-5 py-0 headerlogos">
+                <div class="col-1 p-1 d-block d-lg-none position-relative text-right pr-3">
+                    <i class="fas fa-bars fa-lg mt-2" @click="showmenuchange"></i>
+                    <div class="card position-absolute mycard" v-if="showmenu">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item font13 px-2 py-1 font-weight-bolder">
+                                ثبت نام
+                            </li>
+                            <li class="list-group-item font13 px-2 py-1 font-weight-bolder">
+                                ورود
+                            </li>
+                            <li class="list-group-item font13 px-2 py-1 font-weight-bolder">
+                                پلاک جدید
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9 col-lg-12 py-2">
+                    <div class="widthfit mx-auto">
+                        <a class="pointer">
+                            <img src="/media/aaniro.png" height="25px" class="mx-lg-2">
+                        </a>
+                        <a class="pointer">
+                            <img src="/media/cpay.png" height="25px" class="mx-lg-2">
+                        </a>
+                        <a class="pointer">
+                            <img src="/media/logos.png" height="25px" class="mx-lg-2">
+                        </a>
+                        <a class="pointer">
+                            <img src="/media/sepandar.png" height="25px" class="mx-lg-2">
+                        </a>
+                        <a class="pointer">
+                            <img src="/media/mytehran.png" height="25px" class="mx-lg-2">
+                        </a>
+                        <a class="pointer">
+                            <img src="/media/gilsa.png" height="25px" class="mx-lg-2">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-2 p-1 d-block d-lg-none">
+                    <img src="/media/mylogo2.png" class="d-block d-md-none" width="100%">
+                    <img src="/media/mylogo2.png" class="d-none d-md-block d-lg-none" width="65%">
+                </div>
+
+            </div>
+            <div class="row mx-0 position-absolute topfooter">
+                <div class="row mx-auto footerbottom py-1 px-3">
+                    <div class="widthfit">
+                        <label class="font11 mb-1 d-none d-md-block">
+                            تمام حقوق مادی و معنوی این سایت متعلق به شهر هوشمند گیلسا می باشد
+                        </label>
+                        <small>
+                            <label class="font10 mb-1 d-block d-md-none font-weight-normal">
+                                تمام حقوق مادی و معنوی این سایت متعلق به شهر هوشمند گیلسا می باشد
+                            </label>
+                        </small>
+                        <small class="afrang d-block text-center" dir="ltr">
+                            Powered By
+                            <a href="http://afrangart.ir/">Afrang</a>
+                            Design Studio - TISS Edition © 2018
+                            <label v-if="mydate != 2018" class="afrang m-0">
+                                - {{mydate}}
+                            </label>
                         </small>
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="row mx-0 footer p-lg-5 py-5 px-2 text-right">
-            <div class="col-12 col-lg-6 px-4">
-                <h5>درباره ما</h5>
-                <div class="footertext pt-3">
-                    <p class="font14 text-justify">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                        چاپگرها
-                        و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
-                        و
-                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                    </p>
-                    <p class="font14 text-justify">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                        چاپگرها
-                        و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
-                        و
-                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 col-lg-2 px-4 mt-5 mt-lg-0">
-                <h5>دسترسی ها</h5>
-                <div class="footertext pt-3">
-                    <ul class="footerlink">
-                        <li><a>
-                            درباره ما
-                        </a></li>
-                        <li><a>
-                            تماس با ما
-                        </a></li>
-                        <li><a>
-                            قوانین و مقررات
-                        </a></li>
-                        <li><a>
-                            عوارض آزادراه
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="col-12 col-md-8 col-lg-4 px-4 mt-5 mt-lg-0">
-                <h5>راه های ارتباطی</h5>
-                <div class="row mx-0 footertext">
-                    <div class="col-6 pt-4 text-center text-md-right text-lg-center socialmedia">
-                        <a>
-                            <i class="fab fa-2x fa-twitter ml-2"></i>
-                        </a>
-                        <a>
-                            <i class="fab fa-2x fa-instagram ml-2"></i>
-                        </a>
-                        <a>
-                            <i class="fab fa-2x fa-telegram-plane ml-2"></i>
-                        </a>
-                        <a>
-                            <i class="fab fa-2x fa-google-plus-square"></i>
-                        </a>
-                    </div>
-                    <div class="col-6 pt-4">
-                        <a>
-                            <img src="/media/android.png" class="d-block downloadapp mb-2">
-                        </a>
-                        <a>
-                            <img src="/media/dl-eng.png" class="d-block downloadapp">
-                        </a>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-        <div class="row mx-0 footerbottom py-1 px-3">
-            <div class="widthfit mx-auto">
-                <label class="d-none d-md-block">
-                    تمام حقوق مادی و معنوی این سایت متعلق به شهر هوشمند گیلسا می باشد
-                </label>
-                <label class="font11 d-block d-md-none">
-                    تمام حقوق مادی و معنوی این سایت متعلق به شهر هوشمند گیلسا می باشد
-                </label>
-                <small class="afrang d-block text-center" dir="ltr">
-                    Powered By
-                    <a href="http://afrangart.ir/">Afrang</a>
-                    Design Studio - TISS Edition © 2018
-                    <label v-if="mydate != 2018" class="afrang m-0">
-                    - {{mydate}}
-                    </label>
-                </small>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -223,94 +258,235 @@
         components: {
             'searchplack': searchplack,
         },
-        data(){
-            return{
+        data() {
+            return {
                 mydate: null,
+                showmenu: false,
             }
         },
         methods: {
-            leftarrow(num) {
-                var top = 80 + ((num - 1) * 140);
-                return 'top:' + top + 'px; right: 26%;';
+            showmenuchange(){
+                this.showmenu ? this.showmenu = false : this.showmenu = true;
             },
-            rightarrow(num) {
-                var top = 10 + (num * 140);
-                return 'top:' + top + 'px; left: 26%;';
-            }
         },
         mounted() {
-            // this.mydate = new Date();
-            this.mydate = new Date().toJSON().slice(0,4);
-
-
-            // console.log(this.mydate);
+            this.mydate = new Date().toJSON().slice(0, 4);
         }
     }
 </script>
 
 <style>
-    .footerlink li{
+    .font12{
+        font-size: 12px;
+    }
+    .font13{
+        font-size: 13px;
+    }
+    .mycard{
+        top: 30px;
+        z-index: 10000;
+        width: max-content;
+    }
+    .optionsbtn:hover > div {
+        background-color: #3455e2;
+    }
+
+    .optionsbtn > div {
+        background-color: #2a45b8;
+        color: #E2E2E2;
+        font-weight: bolder;
+        border: 1px solid #9aabe2;
+    }
+
+    .optionstop {
+        top: 50px;
+    }
+
+    .heightfit {
+        height: fit-content;
+    }
+
+    .labelpay {
+        font-size: 18px;
+    }
+
+    .labelserviceright {
+        width: 150px;
+        top: 38px;
+        right: 9px;
+        font-weight: bolder;
+    }
+
+    .labelserviceleft {
+        width: 150px;
+        top: 38px;
+        left: 9px;
+        font-weight: bolder;
+    }
+
+    .mb70 {
+        margin-bottom: 70px;
+    }
+
+    .inputbuttons {
+        border: 1px solid #a8bee4;
+        border-radius: 5px;
+    }
+
+    .mtleft {
+        margin-top: 50px;
+    }
+
+    .bobleyellow {
+        background: radial-gradient(ellipse at center, rgb(227, 151, 0) 0%, rgb(255, 169, 0) 100%);
+    }
+
+    .bobleyellow:hover {
+        background: radial-gradient(ellipse at center, rgb(242, 161, 0) 0%, rgb(255, 181, 26) 100%);
+    }
+
+    .bobleblue {
+        background: radial-gradient(ellipse at center, rgb(12, 88, 181) 0%, rgb(18, 103, 216) 100%);
+    }
+
+    .bobleblue:hover {
+        background: radial-gradient(ellipse at center, rgb(14, 100, 205) 0%, rgb(19, 113, 237) 100%);
+    }
+
+    .boblered {
+        background: radial-gradient(ellipse at center, rgb(198, 2, 50) 0%, rgb(246, 2, 55) 100%);
+    }
+
+    .boblered:hover {
+        background: radial-gradient(ellipse at center, rgb(221, 2, 56) 0%, rgb(255, 2, 56) 100%);
+    }
+
+    .bobleperpel {
+        background: radial-gradient(ellipse at center, rgb(156, 40, 213) 0%, rgb(171, 53, 233) 100%);
+    }
+
+    .bobleperpel:hover {
+        background: radial-gradient(ellipse at center, rgb(169, 43, 230) 0%, rgb(182, 56, 248) 100%);
+    }
+
+    .boblesky {
+        background: radial-gradient(ellipse at center, rgb(21, 188, 208) 0%, rgb(20, 225, 236) 100%);
+    }
+
+    .boblesky:hover {
+        background: radial-gradient(ellipse at center, rgb(23, 204, 226) 0%, rgb(21, 237, 249) 100%);
+    }
+
+    .bobel-right1 {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        top: 10px;
+        left: -20px;
+    }
+
+    .bobel-right2 {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        top: 10px;
+        left: -110px;
+    }
+
+    .bobel-left1 {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        top: 10px;
+        right: -20px;
+    }
+
+    .bobel-left2 {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        top: 10px;
+        right: -110px;
+    }
+
+    .pt110 {
+        padding-top: 110px;
+    }
+
+    .footerlink li {
         font-weight: normal;
     }
-    .footerlink li:hover{
+
+    .footerlink li:hover {
         font-weight: bolder;
         color: #fff;
     }
-    .socialmedia i:hover{
+
+    .socialmedia i:hover {
         color: #fff;
     }
-    .hashie{
+
+    .hashie {
         color: #ffd10f;
         cursor: default;
     }
-    .hashie:hover{
+
+    .hashie:hover {
         text-shadow: 0 0 0 #ffd10f;
     }
+
     .freeroad {
         color: #34e680;
         cursor: default;
     }
-    .freeroad:hover{
+
+    .freeroad:hover {
         text-shadow: 0 0 0 #34e680;
     }
-    .air{
+
+    .air {
         color: #529fff;
         cursor: default;
     }
-    .air:hover{
+
+    .air:hover {
         text-shadow: 0 0 0 #529fff;
     }
-    .trafic{
+
+    .trafic {
         color: #ff6b55;
         cursor: default;
     }
-    .trafic:hover{
+
+    .trafic:hover {
         text-shadow: 0 0 0 #ff6b55;
     }
-    .mobileoption{
+
+    .mobileoption {
         border-bottom: 1px solid #282889;
         width: 100%;
     }
-.font10{
-    font-size: 10px;
-    font-weight: bolder;
-}
+
+    .font10 {
+        font-size: 10px;
+        font-weight: bolder;
+    }
+
     .footerbottom {
-        background-color: #090b11;
-        color: #807e9a;
+        color: #e0e0e0;
         font-size: 14px;
     }
 
     .topfooter {
         bottom: 0;
         width: 100%;
-        background-color: rgba(0, 13, 26, 0.75);
+        background-color: #1340c7eb;
         box-shadow: 0 -5px 5px -3px #282889;
     }
 
     .afrang {
         font-size: 10px;
-        color: #514f61;
+        color: #9e9e9e;
         font-family: Arial;
     }
 
@@ -324,6 +500,7 @@
         font-family: 'nazanin';
         src: url('/fonts/nazanin/Far_NazaninBd.ttf') format('truetype');
     }
+
     @font-face {
         font-family: 'IRANSans';
         src: url('/fonts/IranSans/Farsi_numerals/webFonts/fonts/eot/IRANSansWeb(FaNum).eot');
@@ -336,7 +513,8 @@
     body * {
         font-family: IRANSans;
     }
-    .nazanin{
+
+    .nazanin {
         font-family: nazanin;
         font-weight: bolder;
     }
@@ -360,6 +538,7 @@
         top: 0;
         width: 100%;
         box-shadow: 0 0 5px 1px #282889;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .content {
@@ -367,7 +546,7 @@
     }
 
     .firstpage {
-        background: url('/media/cover.jpg');
+        background: url('/media/back.png');
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -418,6 +597,7 @@
     }
 
     a {
+        color: #8fc5ff !important;
         cursor: pointer;
     }
 

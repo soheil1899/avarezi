@@ -125,7 +125,7 @@ window.PlateList={
     code:'30'
   },
   31:{
-    item:'ه',
+    item:'هـ',
     code:'31'
   },
   32:{
